@@ -1,0 +1,22 @@
+{
+  "accounts":[
+    {
+      "Account": "0100000009999",
+      "AcctName": "KABALIISA SCOVIA",
+      "SchemeCode": "GASTA",
+      "GLCode": "20100",
+      "SolID": "MAIN",
+      "CIFNo": "PBU433369",
+      "Amount": "5000701.07",
+      "ActiveStatus": "A",
+      "LienAmount": "0",
+      "CloseFlag": "N",
+      "Phone": "0781452601",
+      "Email": "scovia.kabaliisa@gmail.com",
+      "Currency": "KSH",
+      "TransId": "T080411551221722C80",
+      "SigningMandate": "AGENT",
+      "ImageData": "/9j/4AAQSkZJRgAB"
+    }
+  ]
+}
