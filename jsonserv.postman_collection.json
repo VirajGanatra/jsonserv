@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "97fef093-50c7-4b2b-a61f-f5af820cb346",
+		"name": "jsonserv",
+		"description": "The only custom request is POST /account. To use this, pass a JSON in the request body (see example request). This request is rerouted as GET /accounts/:accountNumber, where :accountNumber is the value of the accountNumber passed in the JSON request body.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28814646"
+	},
+	"item": [
+		{
+			"name": "POST /account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"accountNumber\": \"01000000099992\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST /account (valid)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\"accountNumber\": \"0100000009999\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "626"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"272-BZ7GnxDwsJ3NlJn7EtGPMrrxUIY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 15 Aug 2023 10:24:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Action\": \"ACCT_INQUIRY\",\n    \"response_code\": \"000\",\n    \"response_status\": true,\n    \"response_message\": \"FINANCIAL TRANSACTION HAS BEEN APPROVED\",\n    \"Data\": {\n        \"Account\": \"0100000009999\",\n        \"AcctName\": \"KABALIISA SCOVIA\",\n        \"SchemeCode\": \"GASTA\",\n        \"GLCode\": \"20100\",\n        \"SolID\": \"MAIN\",\n        \"CIFNo\": \"PBU433369\",\n        \"Amount\": \"5000701.07\",\n        \"ActiveStatus\": \"A\",\n        \"LienAmount\": \"0\",\n        \"CloseFlag\": \"N\",\n        \"Phone\": \"0781452601\",\n        \"Email\": \"scovia.kabaliisa@gmail.com\",\n        \"Currency\": \"KSH\",\n        \"TransId\": \"T080411551221722C80\",\n        \"SigningMandate\": \"AGENT\",\n        \"ImageData\": \"/9j/4AAQSkZJRgAB\"\n    }\n}"
+				},
+				{
+					"name": "POST /account (invalid)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\"accountNumber\": \"01000000099992\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/accounts?accountNumber=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "accountNumber",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, X-HTTP-Method-Override, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Location"
+						},
+						{
+							"key": "Location",
+							"value": "http://localhost:3000/accounts?accountNumber=3/undefined"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3f-zATt3bDSqwvOKrq27PknmNcz8QM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 15 Aug 2023 10:24:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accountNumber\": \"01000000099992\",\n    \"Account\": \"EAb0n8C\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET /accounts/:accountNumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/accounts/0100000009999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"accounts",
+						"0100000009999"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET /accounts/:accountNumber",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/accounts/0100000009999",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accounts",
+								"0100000009999"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "432"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b0-CPGCehqT757+KnzxTQmN+ERrBWQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 15 Aug 2023 10:26:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Account\": \"0100000009999\",\n    \"AcctName\": \"KABALIISA SCOVIA\",\n    \"SchemeCode\": \"GASTA\",\n    \"GLCode\": \"20100\",\n    \"SolID\": \"MAIN\",\n    \"CIFNo\": \"PBU433369\",\n    \"Amount\": \"5000701.07\",\n    \"ActiveStatus\": \"A\",\n    \"LienAmount\": \"0\",\n    \"CloseFlag\": \"N\",\n    \"Phone\": \"0781452601\",\n    \"Email\": \"scovia.kabaliisa@gmail.com\",\n    \"Currency\": \"KSH\",\n    \"TransId\": \"T080411551221722C80\",\n    \"SigningMandate\": \"AGENT\",\n    \"ImageData\": \"/9j/4AAQSkZJRgAB\"\n}"
+				}
+			]
+		}
+	]
+}
